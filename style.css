@@ -1,0 +1,105 @@
+/* Reset CSS */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+html {
+      font-size: 62.5%;
+}
+
+input,
+button {
+      outline: none;
+      border: none;
+}
+
+button {
+      cursor: pointer;
+}
+
+body {
+      width: 100%;
+      height: 100vh;
+}
+
+.app {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.calculator {
+      width: 380px;
+      height: auto;
+      background: black;
+      padding: 1.4rem 2rem;
+      box-shadow: 0 0.2rem 1.6rem rgba(0, 0, 0, 0.4);
+}
+
+.calculator .output,
+.calculator .previous-output {
+      width: 100%;
+      height: 60px;
+      font-size: 6rem;
+      text-align: right;
+      padding: 2rem;
+      background-color: transparent;
+      color: #fff;
+}
+
+.calculator .previous-output {
+      font-size: 3rem;
+      color: gray;
+}
+
+.calculator .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      gap: 1rem 0;
+      padding: 2rem 0;
+}
+
+.calculator .buttons button {
+      --size: 7rem;
+      width: var(--size);
+      height: var(--size);
+      font-size: 3rem;
+      border-radius: 10rem;
+      margin: auto;
+      transition: all 0.2s ease-in-out;
+      background: rgb(39, 39, 39);
+      color: #fff;
+}
+
+.calculator .buttons button:active {
+      background-color: #fff !important;
+}
+
+.calculator .buttons button:last-child {
+      grid-column: span 2;
+      width: 100%;
+}
+
+.calculator .buttons button:nth-child(1),
+.calculator .buttons button:nth-child(2),
+.calculator .buttons button:nth-child(3) {
+      background-color: #757575;
+}
+
+.calculator .buttons button:nth-child(4),
+.calculator .buttons button:nth-child(8),
+.calculator .buttons button:nth-child(12),
+.calculator .buttons button:nth-child(16),
+.calculator .buttons button:last-child {
+      background-color: rgb(255, 173, 20);
+      color: #fff;
+}
+
+.calculator,
+.calculator .output {
+      border-radius: 1.4rem;
+}

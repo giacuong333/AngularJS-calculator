@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Calculator</title>
+            <script
+                  src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
+                  integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
+                  crossorigin="anonymous"
+                  referrerpolicy="no-referrer"></script>
+
+            <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+            <div ng-app="calculator" ng-controller="calculatorController" class="app">
+                  <div class="calculator">
+                        <div class="">
+                              <input type="text" class="previous-output" value="{{previousExpression}}" disabled />
+                              <input type="text" class="output" value="{{expression}}" ng-model="expression" disabled />
+                        </div>
+                        <div class="buttons">
+                              <button ng-repeat="button in buttons" ng-click="handleButtonClicked(button)">
+                                    {{button.label}}
+                              </button>
+                        </div>
+                  </div>
+            </div>
+
+            <script src="calculatorModule.js"></script>
+            <script src="calculatorController.js"></script>
+      </body>
+</html>
